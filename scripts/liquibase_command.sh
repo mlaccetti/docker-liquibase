@@ -5,12 +5,12 @@
 echo "Processing liquibase task..."
 case "$1" in
     "diff" )
-        ./scripts/liquibase_diff.sh
+        ./scripts/liquibase_diff.sh $@
         ;;
     "update" )
-        ./scripts/liquibase_update.sh
+        ./scripts/liquibase_update.sh $@
         ;;
     "generate" )
-        ./scripts/liquibase_generate.sh
+        ./scripts/liquibase_generate.sh $@
         ;;
 esac

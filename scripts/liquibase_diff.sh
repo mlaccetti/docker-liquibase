@@ -14,7 +14,8 @@ echo "Generating diff..."
 liquibase --changeLogFile="$DIR/$TS-$FILE_NAME.$FILE_EXT" diffChangeLog \
   --referenceUrl=$CONNECTION_STRING \
   --referenceUsername=$DB_USER \
-  --referencePassword=$DB_PASS
+  --referencePassword=$DB_PASS \
+  $@
 
 echo "Diff generated into $DIR/$TS-$FILE_NAME.$FILE_EXT."
 
